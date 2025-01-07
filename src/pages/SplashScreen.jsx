@@ -5,9 +5,8 @@ import Logo from "../assets/Logo.png";
 import 'animate.css';
 
 
-const Section = styled.section`
+export const Section = styled.section`
     height: 100vh;
-    background: #0050a0;
     width: 100%;
     display: flex;
     justify-content: center;
