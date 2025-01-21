@@ -1,6 +1,7 @@
 import React from "react";
 import { Section } from "./SplashScreen";
 import { styled } from "styled-components";
+import { Link } from "react-router";
 
 const style = {
   background:
@@ -9,6 +10,7 @@ const style = {
   fontFamily: "Arial",
   display: "grid",
   gap: "10px",
+  justifyItems: "center",
 };
 
 const UL = styled.ul`
@@ -21,21 +23,35 @@ const UL = styled.ul`
   li {
     width: 100px;
     height: 100px;
-    background: aqua;
+    background: #fff;
     border-radius: 50px;
     transition: all 1s;
 
 
+    p{
+    margin:0;
+    color: #000;
+    font-weight: bold;
+    }
+
+    a {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    }
+
     img {
-      width: 90%;
-      height: 90%;
-      object-fit: cover;
-      border-radius: 50px;
+      width: 100%;
+      height: 70%;
     }
 
 
     &:hover {
-      background: blue;
+      background: #fdff97;
       scale: 1.2;
       cursor: pointer;
     }
@@ -48,17 +64,25 @@ const Home = () => {
     <Section style={style}>
       <h1>UNIAJC TOUR</h1>
       <UL>
-        <li>
+        <li className="animate__animated animate__zoomIn">
+          <Link to="/Informacion">
           <img
-            src="https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/import/images/naruto02/221%EF%BD%9E300/221/C225_0060.jpg"
+            className="animate__animated animate__pulse"
+            src="https://www.svgrepo.com/show/533059/camera.svg"
             alt=""
           />
+          <p>Tour</p>
+          </Link>
         </li>
-        <li>
-          <img
-            src="https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/import/images/naruto02/221%EF%BD%9E300/221/C225_0060.jpg"
-            alt=""
-          />
+        <li className="animate__animated animate__zoomIn">
+          <Link to="/Informacion">
+            <img
+              className="animate__animated animate__pulse"
+              src="https://www.svgrepo.com/show/533267/message-square-info.svg"
+              alt=""
+            />
+          <p>Info</p>
+          </Link>
         </li>
       </UL>
     </Section>

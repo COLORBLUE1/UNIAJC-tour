@@ -36,7 +36,7 @@ const SplashScreen = () => {
         <>
             <Section>
                 <figure>
-                    <img class="animate__animated animate__zoomIn" src={Logo} alt="" />
+                    <img className="animate__animated animate__zoomIn" src={Logo} alt="" />
                 </figure>
             </Section>
         </>
